@@ -96,3 +96,10 @@ def calcula_pontos_quina(dados):
         if v >= 5:
             return 50
     return 0
+
+def calcula_pontos_sequencia_baixa(dados):
+    unicos = sorted(set(dados))
+    for i in range(len(unicos) - 3):
+        if unicos[i+3] - unicos[i] == 3:
+            return 15
+    return 0
