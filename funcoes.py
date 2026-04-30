@@ -47,3 +47,9 @@ def calcula_pontos_regra_simples(dados):
             resultado[6] += 6
     
     return resultado
+
+def calcula_pontos_soma(dados):
+    soma = 0
+    for d in dados:
+        soma += d
+    return soma
