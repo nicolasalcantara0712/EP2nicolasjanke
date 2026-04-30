@@ -60,3 +60,18 @@ def calcula_pontos_sequencia_alta(dados):
         if unicos[i+4] - unicos[i] == 4:
             return 30
     return 0
+
+def calcula_pontos_full_house(dados):
+    contagem = {}
+    for d in dados:
+        contagem[d] = contagem.get(d, 0) + 1
+    
+    valores = sorted(contagem.values())
+    
+    if valores == [2, 3]:
+        total = 0
+        for d in dados:
+            total += d
+        return total
+    
+    return 0
