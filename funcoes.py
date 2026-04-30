@@ -53,3 +53,10 @@ def calcula_pontos_soma(dados):
     for d in dados:
         soma += d
     return soma
+
+def calcula_pontos_sequencia_alta(dados):
+    unicos = sorted(set(dados))
+    for i in range(len(unicos) - 4):
+        if unicos[i+4] - unicos[i] == 4:
+            return 30
+    return 0
